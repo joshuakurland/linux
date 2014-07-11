@@ -372,18 +372,7 @@ reference manual.
 				MX6QDL_PAD_CSI0_VSYNC__GPIO5_IO21	0x80000000	/* BT_ON */
 				MX6QDL_PAD_CSI0_DAT12__GPIO5_IO30	0x80000000	/* BT_WAKE */
 				MX6QDL_PAD_CSI0_DATA_EN__GPIO5_IO20     0x80000000	/*BT_HOST_WAKE */
-			>;
-		};
-
-	        pinctrl_spdif_wand: spdifgrp {
-	                fsl,pins = <
-				MX6QDL_PAD_ENET_RXD0__SPDIF_OUT                 0x1b0b0
-			>;
-	        };
-	};
-	gpio {
-		pinctrl_gpio: gpiogrp {
-			fsl,pins = <
+				/* External GPIO */
                                 MX6QDL_PAD_EIM_DA12__GPIO3_IO12   0x1B880 /* GPIO3_12 EDM pin 255 */
                                 MX6QDL_PAD_EIM_DA11__GPIO3_IO11   0x1B880 /* GPIO3_11 EDM pin 256 */
                                 MX6QDL_PAD_EIM_DA10__GPIO3_IO10   0x1B880 /* GPIO3_10 EDM pin 257 */
@@ -396,6 +385,12 @@ reference manual.
                                 MX6QDL_PAD_SD3_RST__GPIO7_IO08    0x1B880 /* GPIO7_8  EDM pin 264 */
 			>;
 		};
+
+	        pinctrl_spdif_wand: spdifgrp {
+	                fsl,pins = <
+				MX6QDL_PAD_ENET_RXD0__SPDIF_OUT                 0x1b0b0
+			>;
+	        };
 	};
 };
 
