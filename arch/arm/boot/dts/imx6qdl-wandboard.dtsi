@@ -169,7 +169,17 @@
 		pinctrl-0 = <&pinctrl_ipu1_1>;
 		status = "okay";
 	};
-
+#if 0
+	bt656@0 {
+      		compatible = "fsl,bt656";
+		ipu_id = <0>;
+      		disp_id = <0>;
+		default_ifmt = "BT656";
+	        pinctrl-names = "default";
+	        pinctrl-0 = <&pinctrl_ipu1_1>;
+	        status = "okay";
+	};
+#endif
 	backlight_lcd {
 		compatible = "pwm-backlight";
 		pwms = <&pwm1 0 5000000>;
